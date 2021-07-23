@@ -56,7 +56,7 @@ OpenTrashCan = function(entity)
 
     if randomChance > 0 and randomChance < Config.ProbabilityWeaponLootObject then
         local randomAmmo = math.random(1, 30)
-        GiveWeaponToPed(GetPlayerPed(-1), randomWeapon, randomAmmo, true, false)
+        GiveWeaponToPed(PlayerPedId(), randomWeapon, randomAmmo, true, false)
         TriggerServerEvent('enp-papelera:Weaponloot', randomWeapon)
     elseif randomChance >=  Config.ProbabilityItemLootObject then
         TriggerServerEvent('enp-papelera:itemloot', randomItem)
